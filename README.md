@@ -1,49 +1,46 @@
+Description
+================
+
+This is a fork of (https://github.com/h4cc/wkhtmltopdf-amd64)[https://github.com/h4cc/wkhtmltopdf-amd64]. Additional documentation for that package (some of which applies to this package) can be found there.
+
+The __h4cc/wkhtmltopdf-amd64__ package is stuck at at wkhtmltopdf version 0.12.4. This was the last wkhtmltopdf release with a generic Linux binary. The intent of this repository is to host the version of the binary actually needed by (Corvus)[https://github.com/RTONational/corvus].
+
+
 wkhtmltopdf
 ================
 
 This repository contains the static compiled binaries from the [wkhtmltopdf project](http://wkhtmltopdf.org/).
 More about the functionality of wkhtmltopdf and wkthmltoimage can be found there.
 
-Binaries for __Microsoft Windows__, also installable with composer, can be found here: [github.com/wemersonjanuario/wkhtmltopdf-windows](https://github.com/wemersonjanuario/wkhtmltopdf-windows)
-
-Binaries for __CentOS 7__, also installable with composer, can be found here: [github.com/rvanlaak/wkhtmltopdf-amd64-centos7](https://github.com/rvanlaak/wkhtmltopdf-amd64-centos7)
-
 ## Installation
 
-_Hint_:
-The version of the binary is equal to the git tag.
-To install the latest version, use '0.12.4'.
+This forked package is not on Packagist and needs to be installed from GitHub. Add the GitHub repository to the requiring project's composer.json file.
 
-### Packagist
+```json
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/RTONational/wkhtmltopdf-amd64"
+        }
+    ],
+```
 
-This package can be found on [Packagist](http://packagist.org) and installed with [Composer](https://getcomposer.org/).
+After this, the package can be installed with
 
-Require the package for _i386_ with:
-
-    php composer.phar require h4cc/wkhtmltopdf-i386 "0.12.4"
-
-And for _amd64_ with:
-
-    php composer.phar require h4cc/wkhtmltopdf-amd64 "0.12.4"
-
-The binary will then be located at:
-
-    vendor/h4cc/wkhtmltopdf-i386/bin/wkhtmltopdf-i386
-
-Also a symlink will be created in your configured bin/ folder, for example:
-
-    vendor/bin/wkhtmltopdf-i386
+```
+composer require rton/wkhtmltopdf-amd64
+```
 
 ### Usage
 
-You can use the path constant to easily locate the binary in the PHP codebase: 
+You can use the path constant to easily locate the binary in the PHP codebase:
 
 ``` php
-$path = \h4cc\WKHTMLToPDF\WKHTMLToPDF::PATH;
+$path = \Rton\WKHTMLToPDF\WKHTMLToPDF::PATH;
 ```
 
 For realpath use following script
 
 ``` php
-$realpath = realpath(\h4cc\WKHTMLToPDF\WKHTMLToPDF::PATH);
+$realpath = realpath(\Rton\WKHTMLToPDF\WKHTMLToPDF::PATH);
 ```
