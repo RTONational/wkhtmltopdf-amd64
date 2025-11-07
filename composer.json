@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Rton\\WKHTMLToPDFAMD64\\": ""
+            "Rton\\WKHTMLToPDF\\": ""
         }
     }
 }
