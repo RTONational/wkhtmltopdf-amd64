@@ -12,6 +12,10 @@
         {
             "name": "Alexander Rice",
             "email": "alexanderrice@rtonational.com"
+        },
+        {
+            "name": "Corie Slate",
+            "email": "corie@houseoftech.com"
         }
     ],
     "minimum-stability": "stable",
